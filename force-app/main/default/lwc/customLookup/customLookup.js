@@ -1,3 +1,18 @@
+/*
+How to use it:
+<c-custom-lookup obj-name="User" fields-name="Id, Name" where-clause-field="Name" icon-name="standard:user"
+                filter="AND IsActive = true" onlookupselected={handleLookupSelected}>
+</c-custom-lookup>
+
+<c-custom-lookup obj-name="Opportunity" icon-name="standard:opportunity"
+                fields-name="Name" where-clause-field="Name" onlookupselected={handleLookupSelected}>
+</c-custom-lookup>
+
+handleLookupSelected(e) {
+    console.log('[handleOwnerSelected] e.detail', JSON.stringify(e.detail));
+}
+*/
+
 import { LightningElement, wire, api, track } from 'lwc';
 import lookUp from '@salesforce/apex/LWCCalendarController.search';
 
